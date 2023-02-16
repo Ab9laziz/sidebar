@@ -1,0 +1,100 @@
+body{
+    margin: 0;   
+}
+.main{
+    border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    height: 60vh;
+    background-image: url("https://cdn.pixabay.com/photo/2018/10/31/15/26/kenya-3786063_1280.jpg");
+}
+.sidebar{
+    border: 1px solid black;
+    width: 10%;
+    box-sizing: content-box; 
+    padding: 0 10px; 
+    transition: width 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    overflow-wrap: break-word;
+    z-index: 1;
+}
+/* .sidebar:hover{
+    width: 15%;
+    transition: width 0.5s ease-out;
+} */
+.content{
+    border:1px solid black;
+    width: 90%;
+    box-sizing: border-box; 
+    height: 50%;
+    overflow-y: auto;
+}
+
+.button{
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    bottom: 21.2rem;
+    left: 7.9rem;
+    z-index: 2;
+}
+.line1{
+    border: 1px solid black;
+    width: 80%;
+}
+.line2{
+    border: 1px solid black;
+    width: 80%;
+}
+.line3{
+    border: 1px solid black;
+    width: 80%;
+}
+
+.sidebar_add_width{
+    width: 15%;
+}
+.hide{
+    visibility: hidden;
+}
+.rotate_clockwise{
+    transform: rotate(45deg)translate(-7px,-7px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.rotate_anticlockwise{
+    transform: rotate(-45deg) translate(-4px,7px);
+    transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (min-width:200px) and (max-width: 500px){
+    .sidebar h2{
+        position: relative;
+        bottom: 10px;
+    }
+    .sidebar{
+        width:45%;
+        background-color: rgba(218, 255, 188,0.2);
+        backdrop-filter: blur(0.5);
+    }
+    .sidebar_add_width{
+        width: 60%;
+    }
+    .content{
+       overflow-y: auto;
+    }
+    .button{
+        position: relative;
+        bottom: 24rem;
+        left: 7rem;
+    
+    }
+}
